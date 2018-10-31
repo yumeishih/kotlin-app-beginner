@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="@color/screenBackground">
 
     <TextView
             android:layout_height="wrap_content"
@@ -14,7 +14,47 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" android:layout_width="wrap_content"
             app:fontFamily="sans-serif-condensed"
-            android:textColor="@android:color/darker_gray" android:textSize="30sp" android:textStyle="bold"
-            android:text="Changed the text again!"/>
+            android:textColor="@android:color/darker_gray" android:textSize="92sp" android:textStyle="bold"
+            android:text="@string/hello_word_text"
+            android:id="@+id/textView" app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintVertical_bias="0.3"/>
+    <Button
+            android:text="Toast"
+            android:onClick="toastMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toast_button"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/buttonBackground"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <Button
+            android:text="Random"
+            android:onClick="randomMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/random_button"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/buttonBackground"
+            android:layout_marginStart="8dp"/>
+    <Button
+            android:text="Count"
+            android:onClick="countMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/count_button" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+            android:background="@color/buttonBackground"
+            app:layout_constraintTop_toBottomOf="@+id/textView" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/toast_button"
+            app:layout_constraintStart_toEndOf="@+id/random_button" android:layout_marginStart="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"/>
 
 </android.support.constraint.ConstraintLayout>
